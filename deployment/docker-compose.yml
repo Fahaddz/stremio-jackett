@@ -32,8 +32,6 @@ services:
     volumes:
       - ./data:/config
       - /path/to/blackhole:/downloads
-    ports:
-      - 9117:9117
     restart: unless-stopped
   jackett-stremio:
     image: belmeg/stremio-addon-jackett
