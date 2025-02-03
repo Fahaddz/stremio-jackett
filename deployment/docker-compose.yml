@@ -2,6 +2,7 @@ name: stremio_jacket
 services:
   flaresolverr:
     image: ghcr.io/flaresolverr/flaresolverr:latest
+    network_mode: "container:gluetun-mcw84kk8os0owck40kg0osgg"
     container_name: flaresolverr
     environment:
       - LOG_LEVEL=${LOG_LEVEL:-info}
@@ -12,8 +13,8 @@ services:
       - TZ=America/Los_Angeles
 #    networks:
 #      - stremio_jacket_network
-    ports:
-      - "${PORT:-8191}:8191"
+#    ports:
+#      - "${PORT:-8191}:8191"
     restart: unless-stopped
   jackett:
     image: lscr.io/linuxserver/jackett:latest
