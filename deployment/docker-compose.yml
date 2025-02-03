@@ -47,7 +47,7 @@ services:
 #    networks:
 #      - stremio_jacket_network
     ports:
-      - 3000:3000
+      - 3007:3000
     restart: unless-stopped
 
 #networks:
