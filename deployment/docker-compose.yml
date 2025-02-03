@@ -18,6 +18,7 @@ services:
   jackett:
     image: lscr.io/linuxserver/jackett:latest
     container_name: jackett
+    network_mode: "container:gluetun"
     environment:
       - PUID=1002
       - PGID=1002
