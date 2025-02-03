@@ -7,8 +7,8 @@ services:
       - LOG_LEVEL=${LOG_LEVEL:-info}
       - LOG_HTML=${LOG_HTML:-false}
       - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
-      - PUID=$(id -u)
-      - PGID=$(id -g)
+      - PUID=1002
+      - PGID=1002
       - TZ=America/Los_Angeles
 #    networks:
 #      - stremio_jacket_network
@@ -19,8 +19,8 @@ services:
     image: lscr.io/linuxserver/jackett:latest
     container_name: jackett
     environment:
-      - PUID=$(id -u)
-      - PGID=$(id -g)
+      - PUID=1002
+      - PGID=1002
       - TZ=America/Los_Angeles
       - AUTO_UPDATE=true #optional
       - RUN_OPTS= #optional
@@ -38,8 +38,8 @@ services:
     image: belmeg/stremio-addon-jackett
     container_name: jackett-stremio
     environment:
-      - PUID=$(id -u)
-      - PGID=$(id -g)
+      - PUID=1002
+      - PGID=1002
       - TZ=America/Los_Angeles
       - ADDON_NAME=stremio_jacket
     depends_on:
