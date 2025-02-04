@@ -34,21 +34,21 @@ services:
       - ./data:/config
       - /path/to/blackhole:/downloads
     restart: unless-stopped
-  jackett-stremio:
-    image: belmeg/stremio-addon-jackett
-    container_name: jackett-stremio
-    environment:
-      - PUID=1002
-      - PGID=1002
-      - TZ=America/Los_Angeles
-      - ADDON_NAME=stremio_jacket
-    depends_on:
-      - jackett
+#  jackett-stremio:
+#    image: belmeg/stremio-addon-jackett
+#    container_name: jackett-stremio
+#    environment:
+#      - PUID=1002
+#      - PGID=1002
+#      - TZ=America/Los_Angeles
+#      - ADDON_NAME=stremio_jacket
+#    depends_on:
+#      - jackett
 #    networks:
 #      - stremio_jacket_network
-    ports:
-      - 3007:3000
-    restart: unless-stopped
+#    ports:
+#      - 3007:3000
+#    restart: unless-stopped
 
 #networks:
 #    stremio_jacket_network:
